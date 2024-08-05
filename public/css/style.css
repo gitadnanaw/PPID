@@ -1,0 +1,1397 @@
+* {
+  box-sizing: border-box;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*HEADER*/
+header {
+  margin: 0 0;
+
+  padding: 16px 32px;
+  background-color: #f05e23;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header .kepala {
+  display: flex;
+  justify-content: space-between;
+}
+header .kiri {
+  text-align: left;
+}
+
+header .kanan {
+  text-align: right;
+}
+
+header .kanan h1 {
+  color: #ffffff;
+}
+.main-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.semboyan {
+  color: #ffffff;
+  margin: 5px 0;
+  font-style: italic; /* Membuat teks menjadi italic */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Menambahkan efek dropdown shadow */
+}
+
+.social-media-icons a i {
+  color: white;
+}
+
+header img {
+  width: 20%;
+  height: 60px;
+}
+.p-address {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 10px 0 0 0;
+  font-style: italic; /* Membuat teks menjadi italic */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Menambahkan efek drop shadow */
+}
+
+.p-address a i {
+  color: white;
+}
+
+.date p {
+  color: #ffffff;
+  font-family: sans-serif;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+#panah {
+  color: white;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: inline-flex;
+}
+
+.main-nav a {
+  display: flex;
+  gap: 1rem;
+  row-gap: 2rem;
+  flex: 5;
+  padding: 0.5em;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #f05e23;
+  color: #fff;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f05e23;
+  width: fit-content;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  top: 22%;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* Hover & Click Events */
+.main-nav a:hover {
+  font-weight: bold;
+  background-color: #8b4513;
+}
+
+.main-nav a:active {
+  background-color: #8b4513;
+}
+
+.drawer-button {
+  display: none;
+
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 28px;
+  color: #141e16;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+/*BODY*/
+
+.selamat {
+  text-align: center;
+  margin-top: 35px;
+  font-family: sans-serif;
+}
+
+.selamat h1 {
+  margin: 0;
+  font-size: 28px;
+  color: black;
+}
+
+.fotodepan {
+  display: flex;
+  align-items: center;
+  margin: 70px;
+  margin-left: 100px;
+}
+
+.fotodepan img {
+  width: 650px;
+  height: auto;
+  border-radius: 10px;
+  background-image: url(foto1.png);
+  background-size: cover;
+  background-position: -60px 0px;
+  animation: animate 5s linear infinite;
+}
+
+.fotodepan div {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.fotodepan h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.fotodepan p {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+
+@keyframes animate {
+  0% {
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 54%;
+  }
+  25% {
+    border-radius: 73% 27% 26% 38% / 75% 36% 64% 27%;
+  }
+  50% {
+    border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
+  }
+  75% {
+    border-radius: 40% 60% 70% 30% / 47% 62% 36% 53%;
+  }
+  100% {
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 54%; /* Menggunakan nilai awal kembali */
+  }
+}
+
+.Informasipublik h1 {
+  font-size: 24px; /* Ukuran font */
+  color: black; /* Warna teks */
+  font-family: sans-serif;
+  text-align: center; /* Menengahkan teks */
+  margin-top: 20px; /* Menambah jarak dari atas */
+}
+
+/*CARD*/
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom dengan lebar yang sama */
+  gap: 35px; /* Jarak antar grid */
+  background: white;
+  padding: 30px; /* Padding agar konten tidak terlalu dekat dengan tepi */
+  max-width: 1000px; /* Mengatur lebar maksimum grid-container */
+  margin: 0 auto; /* Membuat grid-container terletak di tengah layar */
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #f05e23;
+  border-radius: 10px;
+  overflow: hidden; /* Mengatasi overflow pada konten yang melebihi kotak */
+  box-shadow: 2px 2px 4px 0 rgba(139, 69, 19, 0.5);
+  margin-bottom: 20px;
+}
+
+.card-img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 25px auto;
+}
+
+.card-content {
+  padding: 30px;
+  text-align: center;
+  height: 50px;
+  margin-top: 20px;
+  width: center;
+}
+
+.card-content h3 {
+  margin: 0;
+}
+
+.card-content a {
+  text-decoration: none;
+  color: black; /* Mengubah warna teks menjadi hitam */
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/*FOOTER*/
+footer {
+  position: relative;
+  bottom: 0;
+}
+
+.footer {
+  display: flex; /* Menggunakan flexbox */
+  justify-content: space-between; /* Membagi ruang di antara bagian footer menjadi sama besar */
+  align-items: center; /* Menyelaraskan item di tengah vertikal */
+  background-color: #ffffff;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 13px;
+  font-family: sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+
+.footer::before {
+  content: ""; /* Menambahkan konten kosong untuk elemen pseudo */
+  position: absolute; /* Menjadikan posisi absolut */
+  top: -1px; /* Menggeser ke atas sejauh 1 piksel */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Lebar garis */
+  background-color: #ccc; /* Warna garis */
+}
+
+.footer .footer-left,
+.footer .footer-center {
+  display: inline-block;
+  flex: 1;
+  vertical-align: top;
+  padding: 0 10px; /* Tambahkan padding agar garis tidak terlalu dekat dengan konten */
+  margin-left: 30px;
+}
+
+.footer .footer-left img {
+  display: block; /* Membuat gambar menjadi blok agar bisa diatur margin secara otomatis */
+  margin: 20px auto 0; /* Mengatur margin otomatis (auto) di atas dan bawah, dan di tengah secara horizontal */
+  max-width: 100%; /* Memastikan gambar tidak melebihi lebar parent */
+  height: auto; /* Memastikan rasio aspek gambar dipertahankan */
+  max-height: 70px; /* Menambahkan lebar maksimum gambar */
+}
+
+.footer .footer-left h3 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.footer .footer-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-color: #f05e23;
+  padding-top: 5px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: white;
+}
+
+/*FOOTER TENGAH*/
+.footer .footer-center {
+  width: 35%;
+  margin: 0 auto; /* Menengahkan elemen di tengah halaman */
+  margin-left: 150px;
+}
+
+.footer .footer-center h3 {
+  font-weight: normal;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.footer .footer-center i {
+  font-size: 18px;
+  margin: 5px 10px;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px;
+}
+/* FOOTER KANAN */
+.footer .footer-right {
+  float: right; /* Menggeser elemen ke kanan */
+  width: 35%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer .footer-right h3 {
+  font-weight: normal;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.footer .footer-right p {
+  margin: 5px 0; /* Atur margin antara paragraf */
+}
+
+.footer .footer-right i {
+  margin-right: 15px; /* Atur margin kanan ikon */
+  font-size: 18px;
+  align-self: flex-start;
+}
+.footer-right .kontak {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-right .kontak p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-right .kontak p i {
+  margin-right: 10px;
+}
+
+.footer-right .kontak p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-1 .footer-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-color: #f05e23;
+  padding-top: 5px;
+}
+
+/*HALAMAN STRUKTUR ORGANISASI BAWASLU*/
+.gambarstrukturbawaslu {
+  display: flex;
+  justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+  align-items: center; /* Memposisikan elemen ke tengah secara vertikal */
+}
+
+.gambarstrukturbawaslu img {
+  max-width: 50%; /* Maksimum lebar gambar */
+  max-height: auto; /* Maksimum tinggi gambar */
+  margin-top: 50px; /* Jarak antara gambar dan teks di atasnya */
+}
+
+/*HALAMAN PROFIL PIMPINAN*/
+.profilpimpinan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-images,
+.middle-images,
+.bottom-image {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.middle-images {
+  margin: 25px 0;
+}
+
+.profilpimpinan img {
+  width: 250px; /* Atur lebar gambar */
+  height: 100%; /* Atur tinggi gambar */
+  margin-top: 50px;
+}
+
+/*HALAMAN PEJABAT STRUKTURAL*/
+.pejabatstruktural {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pejabatstruktural img {
+  width: 250px; /* Atur lebar gambar */
+  height: 100%; /* Atur tinggi gambar */
+  margin-top: 50px;
+}
+
+/*HALAMAN DASAR HUKUM*/
+.dasarhukum {
+  display: flex;
+  justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+  align-items: center;
+}
+
+.dasarhukum img {
+  max-width: 35%; /* Maksimum lebar gambar */
+  max-height: auto; /* Maksimum tinggi gambar */
+  margin-top: 50px;
+}
+
+/*HALAMAN TUGAS, FUNGSI, DAN WEWENANG*/
+.tugasfungsi {
+  display: flex;
+  justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+  align-items: center; /* Memposisikan elemen ke tengah secara vertikal */
+}
+
+.tugasfungsi img {
+  max-width: 40%; /* Maksimum lebar gambar */
+  max-height: auto; /* Maksimum tinggi gambar */
+  margin-top: 50px; /* Jarak antara gambar dan teks di atasnya */
+}
+
+/*HALAMAN STRUKTUR PPID*/
+.gambarstrukturppid {
+  display: flex;
+  justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+  align-items: center;
+}
+
+.gambarstrukturppid img {
+  max-width: 30%; /* Maksimum lebar gambar */
+  max-height: auto; /* Maksimum tinggi gambar */
+  margin-top: 50px; /* Jarak antara gambar dan teks di atasnya */
+}
+
+/*HALAMAN VISI DAN MISI*/
+.visi h2 {
+  margin-top: 50px;
+}
+
+.visi p {
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 1200px;
+  font-size: 20px;
+}
+
+.misi h2 {
+  margin-top: 50px;
+}
+
+.misi p {
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 1200px;
+  font-size: 20px;
+}
+
+/*HALAMAN KONTAK*/
+.boxkontak {
+  margin: 0 0;
+  padding: 100px 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.boxkontak .kiri {
+  text-align: left;
+}
+
+.boxkontak .kiri .telp h1 {
+  font-size: 24px;
+}
+
+.boxkontak .kiri .telp p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.boxkontak .kiri .email h1 {
+  font-size: 24px;
+  margin-top: 35px;
+}
+
+.boxkontak .kiri .email p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+boxkontak .kiri .email a {
+  text-decoration: none;
+}
+
+.boxkontak .kiri .website h1 {
+  font-size: 24px;
+  margin-top: 35px;
+}
+
+.boxkontak .kiri .website p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.boxkontak .kiri .website a {
+  text-decoration: none;
+}
+
+.boxkontak .kanan {
+  display: flex; /* Menggunakan flexbox untuk mengatur bagian kanan */
+  justify-content: flex-end; /* Memposisikan bagian kanan ke ujung kanan */
+}
+
+.boxkontak .kanan .alamat h1 {
+  font-size: 24px;
+}
+
+.boxkontak .kanan .alamat p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+/* Media Queries (RESPONSIVE) */
+
+/* Laptop */
+@media screen and (max-width: 1366px) {
+  header {
+    padding: 12px;
+    font-size: 80%;
+  }
+
+  .navbar {
+    font-size: 80%;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f05e23;
+    width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: 22%;
+  }
+
+  .selamat h1 {
+    font-size: 28px; /* Mengurangi ukuran font pada layar kecil */
+  }
+
+  /* CSS untuk menempatkan teks di bawah gambar menggunakan flexbox */
+  .fotodepan {
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Menjadikan konten berada dalam satu kolom */
+    align-items: center; /* Menengahkan konten secara horizontal */
+    margin: 70px;
+    margin-left: 100px;
+  }
+
+  .fotodepan img {
+    width: 650px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Menambah jarak antara gambar dan teks */
+  }
+
+  .fotodepan div {
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .fotodepan h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 25; /* Menambah jarak antara judul dan paragraf */
+  }
+
+  .fotodepan p {
+    font-size: 20px;
+    margin: 0; /* Menghilangkan margin */
+  }
+
+  .Informasipublik {
+    text-align: center; /* Pusatkan teks pada layar kecil */
+    margin-top: 20px; /* Atur margin atas */
+  }
+
+  .Informasipublik h1 {
+    font-size: 24px; /* Ubah ukuran font */
+  }
+
+  .card-content h3 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .footer {
+    flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+    padding: 20px; /* Mengurangi padding agar footer tidak terlalu lebar */
+  }
+
+  .footer::before {
+    width: calc(100% - 40px); /* Lebar garis diubah sesuai dengan padding */
+    top: 0; /* Tetap di bagian atas */
+    left: 50%; /* Posisikan di tengah secara horizontal */
+    transform: translateX(-50%); /* Posisikan di tengah secara horizontal */
+  }
+
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    width: 100%; /* Mengisi lebar maksimal */
+    margin-left: 0; /* Menghapus margin kiri */
+    margin-bottom: 30px; /* Menambahkan ruang antara setiap bagian */
+  }
+
+  .footer .footer-left h3,
+  .footer .footer-center h3,
+  .footer .footer-right h3 {
+    text-align: left; /* Mengatur teks menjadi berada di tengah */
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  /*HALAMAN STRUKTUR ORGANISASI BAWASLU*/
+  .gambarstrukturbawaslu {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center; /* Memposisikan elemen ke tengah secara vertikal */
+  }
+
+  .gambarstrukturbawaslu img {
+    max-width: 55%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-bottom: 50px; /* Jarak antara gambar dan teks di atasnya */
+  }
+
+  /*HALAMAN PROFIL PIMPINAN*/
+  .profilpimpinan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-images,
+  .middle-images,
+  .bottom-image {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .middle-images {
+    margin: 25px 0;
+  }
+
+  .profilpimpinan img {
+    width: 250px; /* Atur lebar gambar */
+    height: 100%; /* Atur tinggi gambar */
+    margin-top: 50px;
+  }
+
+  /*HALAMAN PEJABAT STRUKTURAL*/
+  .pejabatstruktural {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .pejabatstruktural img {
+    width: 250px; /* Atur lebar gambar */
+    height: 100%; /* Atur tinggi gambar */
+    margin-top: 50px;
+  }
+  /*HALAMAN DASAR HUKUM*/
+  .dasarhukum {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center;
+  }
+
+  .dasarhukum img {
+    max-width: 35%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 50px;
+  }
+
+  /*HALAMAN TUGAS, FUNGSI, DAN WEWENANG*/
+  .tugasfungsi {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center; /* Memposisikan elemen ke tengah secara vertikal */
+  }
+
+  .tugasfungsi img {
+    max-width: 40%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 50px; /* Jarak antara gambar dan teks di atasnya */
+  }
+
+  .gambarstrukturppid {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center;
+  }
+
+  .gambarstrukturppid img {
+    max-width: 35%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 50px; /* Jarak antara gambar dan teks di atasnya */
+  }
+
+  /*HALAMAN VISI DAN MISI*/
+  .visi h2 {
+    margin-top: 50px;
+    font-size: 22px;
+  }
+
+  .visi p {
+    margin: 0 auto;
+    margin-top: 5px;
+    max-width: 800px;
+    font-size: 20px;
+  }
+
+  .misi h2 {
+    margin-top: 50px;
+    font-size: 22px;
+  }
+
+  .misi p {
+    margin: 0 auto;
+    margin-top: 5px;
+    max-width: 800px;
+    font-size: 20px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+    font-size: 70%;
+  }
+  .main-nav {
+    font-size: 70%;
+  }
+
+  .main-nav ul li .active {
+    right: 0;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f05e23;
+    width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: 20%;
+  }
+
+  .selamat {
+    text-align: center; /* Menengahkan teks */
+    margin-top: 20px; /* Menambahkan jarak atas */
+    font-family: sans-serif;
+  }
+
+  .selamat h1 {
+    font-size: 20px; /* Mengurangi ukuran font pada layar kecil */
+  }
+
+  .fotodepan {
+    display: flex;
+    flex-direction: column; /* Mengatur tata letak ke flex column */
+    align-items: center; /* Mengatur teks menjadi rata tengah */
+    margin: 20px;
+    margin-left: 10px;
+  }
+
+  .fotodepan img {
+    width: 100%; /* Mengatur lebar gambar menjadi penuh */
+    height: auto; /* Menyesuaikan tinggi agar tidak terdistorsi */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Menambah jarak antara gambar dan teks */
+  }
+
+  .fotodepan div {
+    text-align: center; /* Menyusun teks menjadi rata tengah */
+    font-family: sans-serif;
+  }
+
+  .fotodepan h2 {
+    font-size: 22px;
+    margin-top: 25px;
+  }
+  .fotodepan p {
+    margin-left: 0; /* Menyusun teks menjadi rata tengah */
+    font-size: 20px; /* Mengurangi ukuran font pada layar kecil */
+  }
+
+  .Informasipublik {
+    text-align: center; /* Pusatkan teks pada layar kecil */
+    margin-top: 20px; /* Atur margin atas */
+  }
+
+  .Informasipublik h1 {
+    font-size: 22px; /* Ubah ukuran font */
+  }
+
+  .card-container {
+    max-width: 90%; /* Menyesuaikan lebar maksimum kartu */
+    margin: 0 auto; /* Menempatkan container di tengah halaman */
+    padding: 10px; /* Mengurangi padding agar konten tidak terlalu dekat dengan tepi */
+  }
+
+  .card {
+    max-width: 200px; /* Menyesuaikan lebar maksimum kartu */
+    margin: 10px auto; /* Menambahkan jarak antara kartu dan menempatkannya di tengah */
+    padding: 7px;
+  }
+
+  /*CARD PADA TABLET*/
+
+  /*FOOTER*/
+  .footer {
+    padding: 10px; /* Mengurangi padding agar footer tidak terlalu lebar */
+  }
+
+  .footer::before {
+    width: calc(100% - 20px); /* Mengurangi lebar garis sesuai dengan padding */
+  }
+
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    width: 100%; /* Mengisi lebar maksimal */
+    margin-left: 0; /* Menghapus margin kiri */
+    margin-bottom: 2 0px; /* Menambahkan ruang antara setiap bagian */
+  }
+
+  .footer .footer-left h3,
+  .footer .footer-center h3,
+  .footer .footer-right h3 {
+    font-size: 14px; /* Mengurangi ukuran font */
+    margin-bottom: 8px; /* Mengurangi jarak bawah */
+  }
+
+  .footer .footer-left img {
+    float: left;
+  }
+  /*PROFIL PIMPINAN*/
+  .top-images,
+  .middle-images,
+  .bottom-image {
+    flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+    align-items: center;
+  }
+
+  .top-images img,
+  .middle-images img,
+  .bottom-image img {
+    max-width: 85%; /* Maksimum lebar gambar */
+    max-height: auto; /* Tinggi gambar disesuaikan agar tidak melebihi lebar kontainer */
+    margin-bottom: 10px; /* Menambahkan ruang di bawah setiap gambar */
+  }
+
+  .gambarstrukturbawaslu {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center; /* Memposisikan elemen ke tengah secara vertikal */
+  }
+
+  .gambarstrukturbawaslu img {
+    max-width: 55%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 50px; /* Jarak antara gambar dan teks di atasnya */
+  }
+
+  .pejabatstruktural {
+    flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pejabatstruktural img {
+    max-width: 85%; /* Maksimum lebar gambar */
+    max-height: auto; /* Tinggi gambar disesuaikan agar tidak melebihi lebar kontainer */
+    margin-top: 10px;
+  }
+
+  /*HALAMAN DASAR HUKUM*/
+  .dasarhukum {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center;
+  }
+
+  .dasarhukum img {
+    max-width: 35%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 30px;
+  }
+
+  /*HALAMAN TUGAS, FUNGSI, DAN WEWENANG*/
+  .tugasfungsi {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center; /* Memposisikan elemen ke tengah secara vertikal */
+  }
+
+  .tugasfungsi img {
+    max-width: 35%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 30px; /* Jarak antara gambar dan teks di atasnya */
+  }
+
+  .gambarstrukturppid {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center;
+  }
+
+  .gambarstrukturppid img {
+    max-width: 50%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 50px; /* Jarak antara gambar dan teks di atasnya */
+  }
+
+  /*HALAMAN VISI DAN MISI*/
+  .visi h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .visi p {
+    margin: 0 auto;
+    margin-top: 5px;
+    max-width: 600px;
+    font-size: 18px;
+  }
+
+  .misi h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .misi p {
+    margin: 0 auto;
+    margin-top: 5px;
+    max-width: 600px;
+    font-size: 18px;
+  }
+  /*HALAMAN PPID*/
+  .boxkontak {
+    padding: 50px; /* Mengurangi padding agar sesuai dengan layar kecil */
+    flex-direction: column; /* Mengubah tata letak menjadi satu kolom */
+    align-items: center; /* Memposisikan semua konten di tengah secara horizontal */
+  }
+
+  .boxkontak .kiri,
+  .boxkontak .kanan {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+  }
+
+  .boxkontak .kanan .alamat {
+    text-align: center; /* Mengatur teks alamat kantor agar berada di tengah */
+  }
+
+  .boxkontak .kiri .telp h1,
+  .boxkontak .kiri .email h1,
+  .boxkontak .kiri .website h1,
+  .boxkontak .kanan .alamat h1 {
+    font-size: 20px; /* Mengurangi ukuran font judul */
+  }
+
+  .boxkontak .kanan .alamat h1 {
+    margin-top: 25px;
+  }
+
+  .boxkontak .kiri .telp p,
+  .boxkontak .kiri .email p,
+  .boxkontak .kiri .website p,
+  .boxkontak .kanan .alamat p {
+    font-size: 14px; /* Mengurangi ukuran font paragraf */
+    margin-top: 5px; /* Memberikan jarak antara elemen */
+  }
+  .boxkontak .kiri .email a,
+  .boxkontak .kiri .website a {
+    text-decoration: none; /* Menghapus garis bawah pada link email dan website */
+  }
+
+  .boxkontak .kanan .maps iframe {
+    width: 100%; /* Menyesuaikan lebar peta agar sesuai dengan lebar kontainer */
+    height: 300px; /* Mengurangi tinggi peta agar sesuai dengan tampilan di layar kecil */
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 550px) {
+  header {
+    padding: 8px;
+    text-align: center; /* Menengahkan teks dan ikon */
+    font-size: 50%;
+  }
+
+  header .kepala {
+    flex-direction: column;
+    justify-content: center;
+  }
+  header .kiri {
+    text-align: center;
+  }
+
+  header .kanan {
+    text-align: center;
+  }
+  .social-media-icons {
+    text-align: center; /* Menengahkan ikon-ikon media sosial */
+  }
+
+  .social-media-icons a {
+    display: inline-block; /* Menjadikan ikon-ikon media sosial menjadi blok inline */
+    margin: 0 5px; /* Memberikan ruang antara ikon-ikon */
+  }
+
+  .drawer-button {
+    display: inline-block;
+    color: black;
+  }
+  .dropdown-menu {
+    top: 5%;
+    left: 50%;
+  }
+
+  .date {
+    text-align: center;
+  }
+  .date p {
+    color: #ffffff;
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  .main-nav {
+    background-color: #f05e23;
+    min-height: 100vh;
+    width: 200px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    transform: translateX(-200px);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .main-nav ul li,
+  .main-nav ul li a {
+    display: block;
+    font-size: 10px;
+    padding-top: 5px;
+  }
+
+  .main-nav.open {
+    transform: translateX(0);
+  }
+  /*RESPONSIVE BODY PADA SMARTPHONE*/
+
+  .selamat {
+    text-align: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+  }
+
+  .selamat h1 {
+    margin: 0;
+    font-size: 20px; /* Mengurangi ukuran font pada layar kecil */
+    color: black;
+  }
+
+  .fotodepan {
+    margin: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column; /* Mengubah tata letak ke flex column */
+    align-items: center; /* Mengatur teks menjadi rata tengah */
+  }
+
+  .image-container {
+    width: 100%; /* Mengatur lebar gambar menjadi penuh */
+    max-width: 650px; /* Maksimum lebar gambar */
+    margin-bottom: 10px; /* Menambah jarak antara gambar dan teks */
+  }
+
+  .image-container img {
+    max-width: 100%; /* Mengatur lebar maksimum gambar */
+    height: auto; /* Menyesuaikan tinggi agar tidak terdistorsi */
+  }
+
+  .fotodepan div {
+    text-align: center; /* Menyusun teks menjadi rata tengah */
+  }
+
+  .fotodepan h2 {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+  .fotodepan p {
+    margin-left: 0; /* Menyusun teks menjadi rata tengah */
+    font-size: 16px; /* Mengurangi ukuran font pada layar kecil */
+    margin-top: 25px;
+  }
+
+  .Informasipublik {
+    text-align: center; /* Pusatkan teks pada layar kecil */
+    margin-top: 20px; /* Atur margin atas */
+  }
+
+  .Informasipublik h1 {
+    font-size: 18px; /* Ubah ukuran font */
+  }
+
+  /*CARD SMARTPHONE*/
+  .card-container {
+    display: block; /* Mengubah display menjadi block untuk tata letak vertikal */
+    margin: 0 auto; /* Menempatkan container di tengah halaman */
+    max-width: 90%; /* Menyesuaikan lebar maksimum kartu */
+    margin-bottom: 50px;
+    padding: 10px; /* Mengurangi padding agar konten tidak terlalu dekat dengan tepi */
+  }
+
+  .card {
+    max-width: 150px; /* Menyesuaikan lebar maksimum kartu */
+    margin: 10px auto; /* Menambahkan jarak antara kartu dan menempatkannya di tengah */
+    padding: 7px;
+  }
+
+  .card-img {
+    width: 50%; /* Mengatur gambar agar mengisi lebar kartu sepenuhnya */
+  }
+
+  .card-content {
+    padding: 10px; /* Mengurangi padding di dalam kartu */
+  }
+
+  .card-content h3 {
+    font-size: 16px; /* Menyesuaikan ukuran font untuk judul */
+  }
+
+  .card-content p {
+    font-size: 14px; /* Menyesuaikan ukuran font untuk konten */
+  }
+
+  /*FOOTER SMARTPHONE*/
+  /* Smartphone */
+
+  .footer {
+    padding: 10px; /* Mengurangi padding agar footer tidak terlalu lebar */
+  }
+
+  .footer::before {
+    width: calc(100% - 20px); /* Mengurangi lebar garis sesuai dengan padding */
+  }
+
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    width: 100%; /* Mengisi lebar maksimal */
+    margin-left: 0; /* Menghapus margin kiri */
+    margin-bottom: 20px; /* Menambahkan ruang antara setiap bagian */
+  }
+
+  .footer .footer-left h3,
+  .footer .footer-center h3,
+  .footer .footer-right h3 {
+    font-size: 14px; /* Mengurangi ukuran font */
+    margin-bottom: 8px; /* Mengurangi jarak bawah */
+  }
+  .gambarstrukturbawaslu {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center; /* Memposisikan elemen ke tengah secara vertikal */
+  }
+
+  .gambarstrukturbawaslu img {
+    max-width: 50%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 20px; /* Jarak antara gambar dan teks di atasnya */
+  }
+  /*PROFIL PIMPINAN*/
+  .top-images,
+  .middle-images,
+  .bottom-image {
+    flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+    align-items: center;
+  }
+
+  .top-images img,
+  .middle-images img,
+  .bottom-image img {
+    max-width: 65%; /* Maksimum lebar gambar */
+    max-height: auto; /* Tinggi gambar disesuaikan agar tidak melebihi lebar kontainer */
+    margin-bottom: 5px; /* Menambahkan ruang di bawah setiap gambar */
+  }
+
+  /*PEJABAT STRUKTURAL*/
+  .pejabatstruktural {
+    flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pejabatstruktural img {
+    max-width: 50%; /* Maksimum lebar gambar */
+    max-height: auto; /* Tinggi gambar disesuaikan agar tidak melebihi lebar kontainer */
+    margin-bottom: 20px;
+  }
+
+  /*HALAMAN PEJABAT HUKUM*/
+  .dasarhukum {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center;
+  }
+
+  .dasarhukum img {
+    max-width: 50%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 20px;
+  }
+
+  .tugasfungsi {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center;
+  }
+
+  .tugasfungsi img {
+    max-width: 50%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 20px;
+  }
+
+  .gambarstrukturppid {
+    display: flex;
+    justify-content: center; /* Memposisikan elemen ke tengah secara horizontal */
+    align-items: center;
+  }
+
+  .gambarstrukturppid img {
+    max-width: 55%; /* Maksimum lebar gambar */
+    max-height: auto; /* Maksimum tinggi gambar */
+    margin-top: 20px; /* Jarak antara gambar dan teks di atasnya */
+  }
+
+  /*HALAMAN VISI DAN MISI*/
+  .visi h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .visi p {
+    margin: 0 auto;
+    margin-top: 5px;
+    max-width: 350px;
+    font-size: 16px;
+  }
+
+  .misi h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .misi p {
+    margin: 0 auto;
+    margin-top: 5px;
+    max-width: 350px;
+    font-size: 16px;
+  }
+  /*HALAMAN PPID*/
+  .boxkontak {
+    padding: 50px; /* Mengurangi padding agar sesuai dengan layar kecil */
+    flex-direction: column; /* Mengubah tata letak menjadi satu kolom */
+    align-items: center; /* Memposisikan semua konten di tengah secara horizontal */
+  }
+
+  .boxkontak .kiri,
+  .boxkontak .kanan {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+  }
+
+  .boxkontak .kanan .alamat {
+    text-align: center; /* Mengatur teks alamat kantor agar berada di tengah */
+  }
+
+  .boxkontak .kiri .telp h1,
+  .boxkontak .kiri .email h1,
+  .boxkontak .kiri .website h1,
+  .boxkontak .kanan .alamat h1 {
+    font-size: 20px; /* Mengurangi ukuran font judul */
+  }
+
+  .boxkontak .kanan .alamat h1 {
+    margin-top: 25px;
+  }
+
+  .boxkontak .kiri .telp p,
+  .boxkontak .kiri .email p,
+  .boxkontak .kiri .website p,
+  .boxkontak .kanan .alamat p {
+    font-size: 14px; /* Mengurangi ukuran font paragraf */
+    margin-top: 5px; /* Memberikan jarak antara elemen */
+  }
+  .boxkontak .kiri .email a,
+  .boxkontak .kiri .website a {
+    text-decoration: none; /* Menghapus garis bawah pada link email dan website */
+  }
+
+  .boxkontak .kanan .maps iframe {
+    width: 100%; /* Menyesuaikan lebar peta agar sesuai dengan lebar kontainer */
+    height: 300px; /* Mengurangi tinggi peta agar sesuai dengan tampilan di layar kecil */
+  }
+}

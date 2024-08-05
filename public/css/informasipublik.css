@@ -1,0 +1,26 @@
+/*BUTTONN 1*/
+.button {
+  padding-left: 10%; /* Atur padding sisi kiri */
+  font-size: 20px;
+}
+
+.button1 {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1366px) {
+  .button {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .button {
+    font-size: 14px;
+  }
+}

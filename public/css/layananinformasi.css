@@ -1,0 +1,112 @@
+/*HALAMAN WBS*/
+
+.panduan h2 {
+  text-align: left;
+  margin-left: 7%;
+  margin-top: 50px;
+}
+
+.panduan p {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/*HALAMAN SARANA*/
+.sarana {
+  margin-top: 5%;
+}
+
+.sarana h2 {
+  text-align: left;
+  margin-left: 7%;
+}
+
+.sarana p {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 10px;
+  max-width: 1500px;
+  font-size: 20px;
+}
+
+.sarana h2 {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1366px) {
+  /*HALAMAN WBS*/
+
+  .panduan h2 {
+    margin-top: 50px;
+    font-size: 22px;
+  }
+
+  .panduan p {
+    margin-top: 5px;
+    font-size: 20px;
+  }
+
+  /*HALAMAN SARANA*/
+  .sarana h2 {
+    margin-top: 50px;
+    font-size: 22px;
+  }
+
+  .sarana p {
+    margin-top: 5px;
+    max-width: 1000px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /*HALAMAN WBS*/
+
+  .panduan h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .panduan p {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  /*HALAMAN SARANA*/
+  .sarana h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .sarana p {
+    margin-top: 5px;
+    max-width: 600px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 550px) {
+  /*HALAMAN WBS*/
+  .panduan h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .panduan p {
+    margin-top: 5px;
+    max-width: 450px;
+    font-size: 16px;
+  }
+
+  /*HALAMAN SARANA*/
+  .sarana h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .sarana p {
+    margin-top: 5px;
+    max-width: 400px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,105 @@
+.galeri {
+  display: flex;
+  width: 100%;
+  transition: 2s;
+}
+
+.galeri img {
+  width: 100%;
+}
+
+.wrapper {
+  width: 650px;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#slide-1:target ~ .galeri {
+  margin-left: 0px;
+}
+
+#slide-2:target ~ .galeri {
+  margin-left: -100%;
+}
+
+#slide-3:target ~ .galeri {
+  margin-left: -200%;
+}
+
+.navigasi a {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-color: #dedede;
+  font-size: 0px;
+  border-radius: 50%;
+  margin: 3px;
+  transition: 1s;
+}
+
+.navigasi a:hover {
+  background-color: #f05e23;
+}
+
+.navigasi {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: -50px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 75%;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+
+  .galeri img {
+    max-width: 100%; /* Gambar mengisi lebar kontainer */
+    height: auto; /* Mengatur tinggi sesuai proporsi */
+  }
+
+  .navigasi {
+    margin-top: -50px; /* Mengurangi jarak navigasi dari atas */
+  }
+
+  .navigasi a {
+    height: 20px; /* Mengurangi tinggi tombol navigasi */
+    width: 20px; /* Mengurangi lebar tombol navigasi */
+    margin: 2px; /* Mengurangi margin tombol navigasi */
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper {
+    width: 70%;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+
+  .galeri img {
+    max-width: 100%; /* Gambar mengisi lebar kontainer */
+    height: auto; /* Mengatur tinggi sesuai proporsi */
+  }
+
+  .navigasi {
+    margin-top: -50px; /* Mengurangi jarak navigasi dari atas */
+  }
+
+  .navigasi a {
+    height: 20px; /* Mengurangi tinggi tombol navigasi */
+    width: 20px; /* Mengurangi lebar tombol navigasi */
+    margin: 2px; /* Mengurangi margin tombol navigasi */
+  }
+}

@@ -1,0 +1,31 @@
+/*BUTTONN 1*/
+.buttonket {
+  padding-left: 10%; /* Atur padding sisi kiri */
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.buttonket1 {
+  margin-top: 20px;
+}
+
+.keterangan {
+  display: none;
+}
+
+@media screen and (max-width: 1366px) {
+  .buttonket {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .buttonket {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .buttonket {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,48 @@
+.judul {
+  text-align: center;
+  margin-top: 35px;
+  font-family: sans-serif;
+}
+
+.judul h1 {
+  margin: 0;
+  font-size: 28px;
+  color: black;
+  margin-bottom: 100px;
+}
+
+/* Media Queries (RESPONSIVE) */
+
+/* Laptop */
+@media screen and (max-width: 1366px) {
+  .judul h1 {
+    font-size: 28px; /* Mengurangi ukuran font pada layar kecil */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .judul {
+    text-align: center; /* Menengahkan teks */
+    margin-top: 20px; /* Menambahkan jarak atas */
+  }
+
+  .judul h1 {
+    font-size: 20px; /* Mengurangi ukuran font pada layar kecil */
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 550px) {
+  .judul {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .judul h1 {
+    margin: 0;
+    font-size: 20px; /* Mengurangi ukuran font pada layar kecil */
+    color: black;
+    margin-bottom: 30px;
+  }
+}

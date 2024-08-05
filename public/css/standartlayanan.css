@@ -1,0 +1,168 @@
+/*HALAMAN HAK DAN KEWAJIBAN*/
+.hak {
+  margin-top: 5%;
+}
+
+.hak h2,
+.kewajiban h2 {
+  text-align: left;
+  margin-left: 7%;
+}
+
+.hak p,
+.kewajiban p {
+  text-align: left;
+  margin-left: 10%;
+}
+
+.hak h2 {
+  margin-top: 50px;
+}
+
+.hak p {
+  margin-top: 10px;
+  max-width: 1500px;
+  font-size: 20px;
+}
+
+.kewajiban h2 {
+  margin-top: 50px;
+}
+
+.kewajiban p {
+  margin-top: 10px;
+  max-width: 1200px;
+  font-size: 20px;
+}
+
+/*TATA CARA PENGADUAN PENYALAHGUNAAN WEWENANG*/
+.penjelasan {
+  margin-top: 5%;
+}
+
+.penjelasan p,
+.penutup p {
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+}
+
+.penjelasan p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.penutup p {
+  margin-top: 50px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1366px) {
+  /*HALAMAN HAK DAN KEWAJIBAN*/
+  .hak h2 {
+    margin-top: 50px;
+    font-size: 22px;
+  }
+
+  .hak p {
+    margin-top: 5px;
+    max-width: 800px;
+    font-size: 20px;
+  }
+
+  .kewajiban h2 {
+    margin-top: 50px;
+    font-size: 22px;
+  }
+
+  .kewajiban p {
+    margin-top: 5px;
+    max-width: 800px;
+    font-size: 20px;
+  }
+
+  /*TATA CARA PENGADUAN PENYALAHGUNAAN WEWENANG*/
+  .penjelasan p {
+    font-size: 20px;
+  }
+
+  .penutup p {
+    margin-top: 5px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*HALAMAN HAK DAN KEWAJIBAN*/
+  .hak h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .hak p {
+    margin-top: 5px;
+    max-width: 600px;
+    font-size: 18px;
+  }
+
+  .kewajiban h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .kewajiban p {
+    margin-top: 5px;
+    max-width: 600px;
+    font-size: 18px;
+  }
+
+  /*TATA CARA PENGADUAN PENYALAHGUNAAN WEWENANG*/
+  .penjelasan p {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  .penutup p {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /*HALAMAN HAK DAN KEWAJIBAN*/
+  .hak h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .hak p {
+    margin-top: 5px;
+    max-width: 350px;
+    font-size: 16px;
+  }
+
+  .kewajiban h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .kewajiban p {
+    margin-top: 5px;
+    max-width: 350px;
+    font-size: 16px;
+  }
+
+  /*TATA CARA PENGADUAN PENYALAHGUNAAN WEWENANG*/
+
+  .penjelasan p {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+  .penutup p {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}

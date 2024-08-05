@@ -1,0 +1,148 @@
+/*TABEL*/
+
+.table {
+  margin-top: 100px;
+  width: 60%; /* Sesuaikan lebar tabel sesuai kebutuhan */
+  margin: 0 auto; /* Menengahkan tabel di tengah halaman */
+  border-collapse: collapse; /* Menggabungkan border yang berdekatan */
+}
+
+.table th.asc::after {
+  content: " ▲";
+}
+
+.table th.desc::after {
+  content: " ▼";
+}
+
+/*JUDUL TABEL */
+.table th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 18px;
+}
+
+.table tbody th {
+  font-weight: normal;
+}
+
+/* ISI TABEL */
+.table td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+/* TABEL INFROMASI PUBLIK */
+.tableIP {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 40%; /* Sesuaikan lebar tabel sesuai kebutuhan */
+  margin-left: 0; /* Tidak ada margin di sebelah kiri */
+  margin-right: auto; /* Menengahkan tabel ke kanan */
+  border-collapse: collapse; /* Menggabungkan border yang berdekatan */
+  background-color: #f2f2f2;
+}
+
+.tableIP th.asc::after {
+  content: " ▲";
+}
+
+.tableIP th.desc::after {
+  content: " ▼";
+}
+
+/*JUDUL TABEL */
+.tableIP th {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* ISI TABEL */
+.tableIP td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Media Queries (RESPONSIVE) */
+
+/* Laptop */
+@media screen and (max-width: 1366px) {
+  /*TABEL*/
+  .table {
+    width: 80%; /* Mengisi lebar layar penuh */
+  }
+
+  .table th,
+  .table td {
+    padding: 8px; /* Mengurangi padding agar cocok dengan tampilan yang lebih kecil */
+    font-size: 16px; /* Mengurangi ukuran font agar cocok dengan tampilan yang lebih kecil */
+  }
+
+  /*TABEL INFORMASI PUBLIK*/
+  .tableIP {
+    width: 80%; /* Mengisi lebar layar penuh */
+  }
+
+  .tableIP th,
+  .tableIP td {
+    padding: 8px; /* Mengurangi padding agar cocok dengan tampilan yang lebih kecil */
+    font-size: 16px; /* Mengurangi ukuran font agar cocok dengan tampilan yang lebih kecil */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*TABEL*/
+  .table {
+    width: 70%; /* Mengisi lebar layar penuh */
+  }
+
+  .table th,
+  .table td {
+    padding: 6px; /* Mengurangi padding agar cocok dengan tampilan yang lebih kecil */
+    font-size: 14px; /* Mengurangi ukuran font agar cocok dengan tampilan yang lebih kecil */
+  }
+
+  /*TABEL INFORMASI PUBLIK*/
+  .tableIP {
+    width: 70%; /* Mengisi lebar layar penuh */
+  }
+
+  .tableIP th,
+  .tableIP td {
+    padding: 6px; /* Mengurangi padding agar cocok dengan tampilan yang lebih kecil */
+    font-size: 14px; /* Mengurangi ukuran font agar cocok dengan tampilan yang lebih kecil */
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 550px) {
+  /*TABEL*/
+  .table {
+    width: 50%; /* Mengisi lebar layar penuh */
+  }
+
+  .table th,
+  .table td {
+    padding: 6px; /* Mengurangi padding agar cocok dengan tampilan yang lebih kecil */
+    font-size: 12px; /* Mengurangi ukuran font agar cocok dengan tampilan yang lebih kecil */
+  }
+
+  /*TABEL INFORMASI PUBLIK*/
+  .tableIP {
+    width: 50%; /* Mengisi lebar layar penuh */
+  }
+
+  .tableIP th,
+  .tableIP td {
+    padding: 6px; /* Mengurangi padding agar cocok dengan tampilan yang lebih kecil */
+    font-size: 12px; /* Mengurangi ukuran font agar cocok dengan tampilan yang lebih kecil */
+  }
+}
